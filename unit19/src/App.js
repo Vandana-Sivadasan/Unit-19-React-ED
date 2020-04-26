@@ -6,8 +6,9 @@ import Table from './components/datatable';
 function App() {
   return (
   <div>
+    <h1>Employee Directory</h1>
     <Table/>
-  </div>  
+  </div> 
   );
 }
 

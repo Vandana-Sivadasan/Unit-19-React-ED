@@ -8,12 +8,12 @@ class Counter extends React.Component {
       showName: true,
       showPosition: true,
       showId: true,
-      sortOrder: 'DSC',
+      sortOrder: false,
       employees: [
         {
           name: "Bob",
           position: "Engineer",
-          id: "19837937"
+          id: "319837937"
         },
         {
           name: "Vandana",
@@ -21,9 +21,19 @@ class Counter extends React.Component {
           id: "26837638"
         },
         {
-          name: "Joe",
+          name: "Tom",
           position: "Manager",
-          id: "3y78373"
+          id: "5671878373"
+        },
+        {
+          name: "Sarah",
+          position: "Manager",
+          id: "93261878373"
+        },
+        {
+          name: "Jill",
+          position: "Manager",
+          id: "722381878373"
         },
       ],
     };
@@ -37,19 +47,26 @@ class Counter extends React.Component {
   //Create function to handle sorting of employees
   //Create button to call the sort function
 
-  // sortEmployees = () => {
-  //   //write logic to rearrange order of employees array
-  //   //Save new order of employee array to state
-  //   let employees = this.state.employees;
-  //   employees.sort(function(a,b){return a.id - b.id});
-  //   this.setState({ employees : employees})
-  // }
+  toggleSort = () => {
+    console.log("Toggle Sort Function Called!!!");
+    this.setState({ sortOrder: !this.state.sortOrder });
 
-  // sortEmployees() 
+    let employees = this.state.employees;
 
-    //Function for updating sort order of employees
-    // ASC or DSC
-  
+    if (this.state.sortOrder === false ) {
+      employees = employees.sort(function (a, b) { return a.id - b.id });
+    } else {
+      employees = employees.sort(function (a, b) { return b.id - a.id });
+    }
+
+
+    this.setState({ employees: employees })
+  }
+
+
+  //Function for updating sort order of employees
+  // ASC or DSC
+
 
   handleStateChange = (property) => {
     if (property === "name") {
@@ -73,18 +90,46 @@ class Counter extends React.Component {
         position: "Software Engineer",
         id: "26837638"
       },
+
       {
-        name: "Joe",
+        name: "Tom",
         position: "Manager",
         id: "3y78373"
       },
+      {
+        name: "Sarah",
+        position: "Manager",
+        id: "3y78373"
+      },
+      {
+        name: "Jill",
+        position: "Engineer",
+        id: "3y78373"
+      },
+      
     ]
     return (
-      <div>
-        <p>Toggle Data</p>
-        <button onClick={() => this.handleStateChange("name")} value={2}>Name</button>
+      
+        <p>Toggle Data style: center</p>
+        <div class="container">
+        <div class="row">
+    <div class="col-sm">
+      One of three columns
+    </div>
+    <div class="col-sm">
+      One of three columns
+    </div>
+    <div class="col-sm">
+      One of three columns
+    </div>
+  </div>
+  </div>
+        <button onClick={() => this.handleStateChange("name")}>Name</button>
         <button onClick={() => this.handleStateChange("position")}>Position</button>
         <button onClick={() => this.handleStateChange("id")}>ID</button>
+        <br />
+        <button onClick={() => this.toggleSort()}>Sort ID's ASC / DSC</button>
+        
 
         <table>
           <tr>
@@ -97,14 +142,14 @@ class Counter extends React.Component {
             <tr>
               <td style={{ display: (this.state.showName ? `block` : `none`) }}>{employee.name}</td>
               <td style={{ display: (this.state.showPosition ? `block` : `none`) }}>{employee.position}</td>
-              <td>{employee.id}</td>
+              <td style={{ display: (this.state.showId ? `block` : `none`) }}>{employee.id}</td>
             </tr>
           )}
         </table>
-      </div>
+  
 
-    );
-  }
+          }; 
+
 }
 
 export default Counter;
