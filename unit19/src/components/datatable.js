@@ -109,21 +109,23 @@ class Counter extends React.Component {
       
     ]
     return (
+        <div>
+        <p class="Toggle Data" style="text-align:center;"></p>
+        </div>
       
-        <p>Toggle Data style: center</p>
-        <div class="container">
-        <div class="row">
-    <div class="col-sm">
-      One of three columns
-    </div>
-    <div class="col-sm">
-      One of three columns
-    </div>
-    <div class="col-sm">
-      One of three columns
-    </div>
-  </div>
-  </div>
+      //<div class="container">
+      //<div class="row">
+      //<div class="col-sm">
+      //Name
+    //</div>
+    //<div class="col-sm">
+      //Position
+    //</div>
+    //<div class="col-sm">
+     // ID
+    //</div>
+  //</div>
+  
         <button onClick={() => this.handleStateChange("name")}>Name</button>
         <button onClick={() => this.handleStateChange("position")}>Position</button>
         <button onClick={() => this.handleStateChange("id")}>ID</button>
@@ -146,9 +148,9 @@ class Counter extends React.Component {
             </tr>
           )}
         </table>
-  
+        
 
-          }; 
+  }; 
 
 }
 
