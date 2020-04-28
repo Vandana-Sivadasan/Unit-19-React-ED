@@ -53,7 +53,7 @@ class Counter extends React.Component {
 
     let employees = this.state.employees;
 
-    if (this.state.sortOrder === false ) {
+    if (this.state.sortOrder === false) {
       employees = employees.sort(function (a, b) { return a.id - b.id });
     } else {
       employees = employees.sort(function (a, b) { return b.id - a.id });
@@ -106,52 +106,54 @@ class Counter extends React.Component {
         position: "Engineer",
         id: "3y78373"
       },
-      
+
     ]
+
     return (
+      <div>
         <div>
-        <p class="Toggle Data" style="text-align:center;"></p>
+          <p className="Toggle Data" style={{ textAlign: `center` }}></p>
         </div>
-      
-      //<div class="container">
-      //<div class="row">
-      //<div class="col-sm">
-      //Name
-    //</div>
-    //<div class="col-sm">
-      //Position
-    //</div>
-    //<div class="col-sm">
-     // ID
-    //</div>
-  //</div>
-  
-        <button onClick={() => this.handleStateChange("name")}>Name</button>
-        <button onClick={() => this.handleStateChange("position")}>Position</button>
-        <button onClick={() => this.handleStateChange("id")}>ID</button>
-        <br />
-        <button onClick={() => this.toggleSort()}>Sort ID's ASC / DSC</button>
-        
 
-        <table>
-          <tr>
-            <th>Employee Name</th>
+        <div className="container">
+          <div className="row">
+            <div className="col-sm">
+              Name
+            </div>
+            <div className="col-sm">
+              Position
+            </div>
+            <div className="col-sm">
+              ID
+            </div>
+          </div>
+        </div>
 
-          </tr>
+          <button onClick={() => this.handleStateChange("name")}>Name</button>
+          <button onClick={() => this.handleStateChange("position")}>Position</button>
+          <button onClick={() => this.handleStateChange("id")}>ID</button>
+          <br />
+          <button onClick={() => this.toggleSort()}>Sort ID's ASC / DSC</button>
 
-          {this.state.employees.map((employee) =>
-            // filter name/position/id based on the state
+
+          <table>
             <tr>
-              <td style={{ display: (this.state.showName ? `block` : `none`) }}>{employee.name}</td>
-              <td style={{ display: (this.state.showPosition ? `block` : `none`) }}>{employee.position}</td>
-              <td style={{ display: (this.state.showId ? `block` : `none`) }}>{employee.id}</td>
+              <th>Employee Name</th>
+
             </tr>
-          )}
-        </table>
-        
 
+            {this.state.employees.map((employee) =>
+              // filter name/position/id based on the state
+              <tr>
+                <td style={{ display: (this.state.showName ? `block` : `none`) }}>{employee.name}</td>
+                <td style={{ display: (this.state.showPosition ? `block` : `none`) }}>{employee.position}</td>
+                <td style={{ display: (this.state.showId ? `block` : `none`) }}>{employee.id}</td>
+              </tr>
+            )}
+          </table>
+        </div>
+        )
   }; 
-
 }
 
 export default Counter;
