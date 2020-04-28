@@ -111,23 +111,7 @@ class Counter extends React.Component {
 
     return (
       <div>
-        <div>
-          <p className="Toggle Data" style={{ textAlign: `center` }}></p>
-        </div>
-
-        <div className="container">
-          <div className="row">
-            <div className="col-sm">
-              Name
-            </div>
-            <div className="col-sm">
-              Position
-            </div>
-            <div className="col-sm">
-              ID
-            </div>
-          </div>
-        </div>
+        
 
           <button onClick={() => this.handleStateChange("name")}>Name</button>
           <button onClick={() => this.handleStateChange("position")}>Position</button>
