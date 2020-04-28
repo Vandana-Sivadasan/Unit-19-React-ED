@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/Unit-19-React-ED/static/css/main.f0ccc4c2.chunk.css",
+    "main.js": "/Unit-19-React-ED/static/js/main.8b593925.chunk.js",
+    "main.js.map": "/Unit-19-React-ED/static/js/main.8b593925.chunk.js.map",
+    "runtime-main.js": "/Unit-19-React-ED/static/js/runtime-main.0aca98c1.js",
+    "runtime-main.js.map": "/Unit-19-React-ED/static/js/runtime-main.0aca98c1.js.map",
+    "static/js/2.033f3caa.chunk.js": "/Unit-19-React-ED/static/js/2.033f3caa.chunk.js",
+    "static/js/2.033f3caa.chunk.js.map": "/Unit-19-React-ED/static/js/2.033f3caa.chunk.js.map",
+    "index.html": "/Unit-19-React-ED/index.html",
+    "precache-manifest.8288ebc864f137c5332b78ef709d4859.js": "/Unit-19-React-ED/precache-manifest.8288ebc864f137c5332b78ef709d4859.js",
+    "service-worker.js": "/Unit-19-React-ED/service-worker.js",
+    "static/css/main.f0ccc4c2.chunk.css.map": "/Unit-19-React-ED/static/css/main.f0ccc4c2.chunk.css.map",
+    "static/js/2.033f3caa.chunk.js.LICENSE.txt": "/Unit-19-React-ED/static/js/2.033f3caa.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/Unit-19-React-ED/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0aca98c1.js",
+    "static/js/2.033f3caa.chunk.js",
+    "static/css/main.f0ccc4c2.chunk.css",
+    "static/js/main.8b593925.chunk.js"
+  ]
+}
